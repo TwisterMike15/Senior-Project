@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+    Paul Maclean
+    Anthony Carrola
+    Michael Gorse
+    Robert Breckenridge
+    VTT
+    Description: The main webpage.
+-->
+<html>
+    <head profile="https://www.w3.org/2006/vcard/ns">   
+        
+    <link rel="stylesheet" type="text/css" href="CSS/mainpageCSS.css" />
+    
+    <title>Vulcan Transit Tracker</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+   
+    
+    <body>
+        <h1 style="color:red; text-align: center;"><b>Vulcan Transit Tracker</b></h1>
+
+        <!--The div element for the map -->
+        <div id="map"></div>
+        <div id="button">
+<!--            button div where java script places them-->
+        </div>
+        <div id="businfo">
+<!--            bus info goes here from js
+        </div>
+    
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    
+    <script>
+        function initMap() {
+            // The location of CalU
+            var CalU = {lat: 40.05, lng: -79.89};
+            var mapBounds = {
+                north: 40.08058,
+                south: 40.019265,
+                west:  -79.945245,
+                east:  -79.830783
+            };
+
+            // The map, centered at CalU with bounds
+            map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 13, 
+                center: CalU, 
+                restriction: {
+                    latLngBounds: mapBounds,
+                    strictBounds: false
+                },
+                draggable: true
+            });
+        }
+    </script>
+    
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAR_i2-Tkpn41_QKt2UUFFtq47bhQ_JHJQ&callback=initMap"> async defer
+    </script>
+    
+    
+     <!-- links to java script files -->
+     <script src="script/LineCoordinates.js"  type="text/javascript"></script>
+     <script src="script/BusStopClass.js"  type="text/javascript"></script>
+     <script src="script/RouteClass.js"  type="text/javascript"></script>
+     <script src="script/BusClass.js"  type="text/javascript"></script>
+     <script src="script/main.js" type="text/javascript" ></script>
+    
+    </body>
+   
+</html>

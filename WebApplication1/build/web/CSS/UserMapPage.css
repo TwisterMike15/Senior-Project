@@ -1,0 +1,54 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 9, 2020, 2:42:03 PM
+    Author     : Towny
+*/
+
+.map {
+    border: #1161ee;
+    border-style: solid;
+    height: 400px;
+    width:60%;
+}
+
+.vehicleName {
+    font-size: 22px;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    color: blue;
+    text-shadow: 1px 1px black;
+}
+.vehicleType {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    color: orange;
+}
+.weatherMessage {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+}
+
+
+.TimeToDest {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+}
+.DistToDest {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+}
+.TravelAdvice {
+    font-size: 22px;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    color: orange;
+    display: inline;
+}
